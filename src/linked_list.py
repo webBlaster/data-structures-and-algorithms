@@ -10,16 +10,20 @@ class LinkedList:
 
     def append(self, new_element):
         current = self.head
-        if self.head == None:
+        if self.head:
+            while current.next:
+                current = current.next
+            current = new_element
+        else:
             self.head = new_element
-            return
-        while current.next:
-            current = current.next
-        current.next = new_element
 
     def print_value(self):
-        if self.head != None:
-            print(self.head.next)
+        current = self.head
+        result = ''
+        while self.head:
+            result += str(self.head.value) + '--->'
+            current = current.next
+        print(result)
 
 
 first_element = Element(2)
