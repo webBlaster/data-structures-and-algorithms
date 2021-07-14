@@ -16,3 +16,6 @@ class LinkedList:
             current = new_element
         else:
             self.head = new_element
+
+    def print(self):
+        return
