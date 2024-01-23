@@ -18,6 +18,7 @@ class Queue:
     def front_of_queue(self):
         if not self.is_queue_empty():
             return self.queue[0]
+        print("Info: queue is empty")
     
     def queue_size(self):
         return len(self.queue)
